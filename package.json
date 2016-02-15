@@ -1,0 +1,34 @@
+{
+  "name": "reflux-todo-es6",
+  "version": "0.0.1",
+  "description": "a reflux react react-router todolist demo based on ES6 ",
+  "scripts": {
+    "test": "grunt test",
+    "test:sauce": "grunt karma:sauce",
+    "benchmark": "node test/benchmarks",
+    "build": "grunt build"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Dunhuang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dunhuang/reflux-todo-es6.git"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "classnames": "^2.2.3",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "react": "^0.14.7",
+    "react-addons": "^0.9.0",
+    "react-router": "^2.0.0",
+    "reflux": "^0.3.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.13"
+  }
+}
