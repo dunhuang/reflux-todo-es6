@@ -9,7 +9,20 @@ Any questions please concat shiyh2012@foxmail.com
 npm install
 ```
 ```
-webpack --display-error-details
+npm start
 ```
-## How to run
+即可以运行webpack-hot-server来实现修改后自动编译自动刷新的效果
+
+## How to build
 Start a local server, such as nginx... 
+
+```
+npm run-script build
+```
+支持编译成es5
+
+```
+npm run-script build-watch
+```
+
+动态编译
