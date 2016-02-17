@@ -1,4 +1,4 @@
-import React, {Component} from 'react/addons';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Reflux from 'reflux'; 
 //import ReactMixin from 'react-mixin';

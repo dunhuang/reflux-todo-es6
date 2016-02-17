@@ -6,9 +6,9 @@ webpackJsonp([0,1],[
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _addons = __webpack_require__(1);
+	var _react = __webpack_require__(1);
 
-	var _addons2 = _interopRequireDefault(_addons);
+	var _react2 = _interopRequireDefault(_react);
 
 	var _reactDom = __webpack_require__(2);
 
@@ -124,33 +124,33 @@ webpackJsonp([0,1],[
 	        'completed': this.props.isComplete,
 	        'editing': this.state.isEditing
 	      });
-	      return _addons2.default.createElement(
+	      return _react2.default.createElement(
 	        'li',
 	        { className: classes },
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'view' },
-	          _addons2.default.createElement('input', { className: 'toggle', type: 'checkbox', checked: !!this.props.isComplete, onChange: this.handleToggle.bind(this) }),
-	          _addons2.default.createElement(
+	          _react2.default.createElement('input', { className: 'toggle', type: 'checkbox', checked: !!this.props.isComplete, onChange: this.handleToggle.bind(this) }),
+	          _react2.default.createElement(
 	            'label',
 	            { onDoubleClick: this.handleEditStart.bind(this) },
 	            this.props.label
 	          ),
-	          _addons2.default.createElement('button', { className: 'destroy', onClick: this.handleDestroy.bind(this) })
+	          _react2.default.createElement('button', { className: 'destroy', onClick: this.handleDestroy.bind(this) })
 	        ),
-	        _addons2.default.createElement('input', { ref: 'editInput', className: 'edit', value: this.state.editValue, onChange: this.handleValueOnChange.bind(this), onKeyUp: this.handleValueChange.bind(this), onBlur: this.handleBlur.bind(this) })
+	        _react2.default.createElement('input', { ref: 'editInput', className: 'edit', value: this.state.editValue, onChange: this.handleValueOnChange.bind(this), onKeyUp: this.handleValueChange.bind(this), onBlur: this.handleBlur.bind(this) })
 	      );
 	    }
 	  }]);
 
 	  return TodoItem;
-	}(_addons.Component);
+	}(_react.Component);
 
 	;
 	TodoItem.propTypes = {
-	  label: _addons2.default.PropTypes.string.isRequired,
-	  isComplete: _addons2.default.PropTypes.bool.isRequired,
-	  id: _addons2.default.PropTypes.number
+	  label: _react2.default.PropTypes.string.isRequired,
+	  isComplete: _react2.default.PropTypes.bool.isRequired,
+	  id: _react2.default.PropTypes.number
 	};
 	// Renders the todo list as well as the toggle all button
 	// Used in TodoApp
@@ -196,20 +196,20 @@ webpackJsonp([0,1],[
 	        "main": true,
 	        "hidden": this.props.list.length < 1
 	      });
-	      return _addons2.default.createElement(
+	      return _react2.default.createElement(
 	        'section',
 	        { id: 'main', className: classes },
-	        _addons2.default.createElement('input', { id: 'toggle-all', className: 'toggle-all', type: 'checkbox', onChange: this.toggleAll.bind(this) }),
-	        _addons2.default.createElement(
+	        _react2.default.createElement('input', { id: 'toggle-all', className: 'toggle-all', type: 'checkbox', onChange: this.toggleAll.bind(this) }),
+	        _react2.default.createElement(
 	          'label',
 	          { htmlFor: 'toggle-all' },
 	          'Mark all as complete'
 	        ),
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'ul',
 	          { id: 'todo-list', className: 'todo-list' },
 	          filteredList.map(function (item) {
-	            return _addons2.default.createElement(TodoItem, { label: item.label, isComplete: item.isComplete, id: item.key, key: item.key });
+	            return _react2.default.createElement(TodoItem, { label: item.label, isComplete: item.isComplete, id: item.key, key: item.key });
 	          })
 	        )
 	      );
@@ -217,7 +217,7 @@ webpackJsonp([0,1],[
 	  }]);
 
 	  return TodoMain;
-	}(_addons.Component);
+	}(_react.Component);
 
 	;
 
@@ -250,21 +250,21 @@ webpackJsonp([0,1],[
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _addons2.default.createElement(
+	      return _react2.default.createElement(
 	        'header',
 	        { id: 'header' },
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'h1',
 	          null,
 	          'todos'
 	        ),
-	        _addons2.default.createElement('input', { id: 'new-todo', className: 'new-todo', placeholder: 'What needs to be done?', autoFocus: true, onKeyUp: this.handleValueChange.bind(this) })
+	        _react2.default.createElement('input', { id: 'new-todo', className: 'new-todo', placeholder: 'What needs to be done?', autoFocus: true, onKeyUp: this.handleValueChange.bind(this) })
 	      );
 	    }
 	  }]);
 
 	  return TodoHeader;
-	}(_addons.Component);
+	}(_react.Component);
 
 	;
 
@@ -292,98 +292,98 @@ webpackJsonp([0,1],[
 	          footerClass = (0, _classnames2.default)({ footer: true, hidden: !nbrtotal }),
 	          completedLabel = "Clear completed (" + nbrcompleted + ")",
 	          itemsLeftLabel = nbrincomplete === 1 ? " item left" : " items left";
-	      return _addons2.default.createElement(
+	      return _react2.default.createElement(
 	        'footer',
 	        { id: 'footer', className: footerClass },
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'p',
 	          { id: 'todo-count', className: 'todo-count' },
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'strong',
 	            null,
 	            nbrincomplete
 	          ),
 	          itemsLeftLabel
 	        ),
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'ul',
 	          { id: 'filters', className: 'filters' },
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'li',
 	            null,
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              _reactRouter.Link,
 	              { activeClassName: 'selected', to: HOME },
 	              'All'
 	            )
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'li',
 	            null,
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              _reactRouter.Link,
 	              { activeClassName: 'selected', to: '/active' },
 	              'Active'
 	            )
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'li',
 	            null,
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              _reactRouter.Link,
 	              { activeClassName: 'selected', to: '/completed' },
 	              'Completed'
 	            )
 	          )
 	        ),
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'button',
 	          { id: 'clear-completed', className: clearButtonClass, onClick: _todoRefluxAction2.default.clearCompleted },
 	          completedLabel
 	        ),
-	        _addons2.default.createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'info' },
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'Double-click to edit a todo'
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'Changed by ',
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              'a',
 	              { href: 'http://github.com/dunhuang' },
 	              'Dunhuang'
 	            )
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'Template by ',
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              'a',
 	              { href: 'http://github.com/sindresorhus' },
 	              'Sindre Sorhus'
 	            )
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'Created by ',
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              'a',
 	              { href: 'https://github.com/spoike/refluxjs' },
 	              'Mikael Brassman'
 	            )
 	          ),
-	          _addons2.default.createElement(
+	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'Part of ',
-	            _addons2.default.createElement(
+	            _react2.default.createElement(
 	              'a',
 	              { href: 'http://todomvc.com' },
 	              'TodoMVC'
@@ -395,10 +395,10 @@ webpackJsonp([0,1],[
 	  }]);
 
 	  return TodoFooter;
-	}(_addons.Component);
+	}(_react.Component);
 
 	TodoFooter.propTypes = {
-	  list: _addons2.default.PropTypes.arrayOf(_addons2.default.PropTypes.object).isRequired
+	  list: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object).isRequired
 	};
 
 	// Renders the full application
@@ -438,31 +438,31 @@ webpackJsonp([0,1],[
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _addons2.default.createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _addons2.default.createElement(TodoHeader, null),
-	        _addons2.default.cloneElement(this.props.children, { list: this.state.list }),
-	        _addons2.default.createElement(TodoFooter, { list: this.state.list })
+	        _react2.default.createElement(TodoHeader, null),
+	        _react2.default.cloneElement(this.props.children, { list: this.state.list }),
+	        _react2.default.createElement(TodoFooter, { list: this.state.list })
 	      );
 	    }
 	  }]);
 
 	  return TodoApp;
-	}(_addons.Component);
+	}(_react.Component);
 
 	;
 	//ReactMixin.onClass(TodoApp, Reflux.connect(todoListStore,"list"));
 
-	var routes = _addons2.default.createElement(
+	var routes = _react2.default.createElement(
 	  _reactRouter.Router,
 	  { component: TodoApp },
-	  _addons2.default.createElement(_reactRouter.Route, { path: HOME, component: TodoMain }),
-	  _addons2.default.createElement(_reactRouter.Route, { path: '/completed', component: TodoMain }),
-	  _addons2.default.createElement(_reactRouter.Route, { path: '/active', component: TodoMain })
+	  _react2.default.createElement(_reactRouter.Route, { path: HOME, component: TodoMain }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/completed', component: TodoMain }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/active', component: TodoMain })
 	);
 
-	_reactDom2.default.render(_addons2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: routes }), document.getElementById('todoapp'));
+	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: routes }), document.getElementById('todoapp'));
 
 /***/ },
 /* 1 */

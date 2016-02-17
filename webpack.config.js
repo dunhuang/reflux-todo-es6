@@ -5,7 +5,7 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
   entry: {
-    "todo.reflux.component":"./src/js/todo.reflux.component"
+    "todo.reflux.component":"./src/js/todo.reflux.component.js"
   },
   output: {
     path: path.join(__dirname, './build'),  //打包输出的路径
